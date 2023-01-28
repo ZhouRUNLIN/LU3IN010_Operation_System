@@ -2,7 +2,7 @@
 #define PARTIE1
 
 //Exercice 2
-#define NMAX 10
+#define NMAX 1000000
 
 //Question 2.1
 void initTab(int *tab, int size);

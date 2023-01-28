@@ -1,8 +1,8 @@
-e1:
+findLargestNum:
 	gcc -c findLargestNum.c
 	gcc findLargestNum.o -o findLargestNum
 
-e2: mainTab.o tab.o
+main: mainTab.o tab.o
 	gcc mainTab.o tab.o -o mainTab
 
 tab.o: tab.c tab.h
@@ -12,4 +12,4 @@ mainTab.o: mainTab.c tab.h
 	gcc -c mainTab.c -o mainTab.o
 
 clean:
-	rm -f *.o tme_q1
+	rm -f *.o findLargestNum mainTab

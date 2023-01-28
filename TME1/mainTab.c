@@ -18,20 +18,23 @@ void PrintMem(){
 }
 
 int main(){
-    PrintMem();
     //test pour 2.1-2.3
     int tab1[NMAX];
+    PrintMem();
     initTab(tab1, NMAX);
+    PrintMem();
     printTab(tab1, 5);
 
     int* tab2 = (int*)malloc(sizeof(int)*NMAX);
+    PrintMem();
     initTab(tab2, NMAX);
+    PrintMem();
     printTab(tab2, 5);
 
     //test pour 2.5-2.6
     printf("somme de tab1 est : %d\n", sumTab(tab1, 5));
     printf("somme de tab2 est : %d\n", sumTab(tab2, 5));
-    
+
     int min;
     minSumTab(&min, tab1, 5);
     printf("smallest number in the tab1 : %d\n", min);
@@ -39,6 +42,13 @@ int main(){
     minSumTab(&min, tab2, 5);
     printf("smallest number in the tab1 : %d\n", min);
 
-    PrintMem();
     free(tab2);
 }
+
+/*
+    reponse pour Question 2.9:
+    La mémoire n'est pas occupée lorsque le tableau est déclaré, mais après l'exécution de la fonction initTab().
+    je pense que la raison est quand on déclaré les tableaux, les données sont vides, donc l'état de la mémoire 
+        est qu'elle est simplement allouée, mais pas occupée.
+        donc après on remplir les tableaux par la focntiomn initTab(), les espaces mémoires sont bien occupées
+*/
