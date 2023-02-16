@@ -4,9 +4,8 @@
 #include <unistd.h>
 
 int main(int argc, char *argv[]){
-	char* temp = "";
-	char* command = argv[0];
-	int p = 0; int i = 1;
+	char* command = argv[1];
+	int p = 0; int i = 2;
 	while(i<argc && p==0){
 		if((p=fork()) == 0){
 			execl("./", "grep", command, argv[i]);
