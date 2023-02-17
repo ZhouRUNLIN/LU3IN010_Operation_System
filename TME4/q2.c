@@ -31,6 +31,7 @@ int wait_fils(int* l){
 int main(int argc, char *argv[]){
 	char* command = argv[1];
 	int i = 2; int p = 0;
+	int cmd;
 	int* list_fils = malloc(MAXFILS*sizeof(int));
 	for(int i0=0;i0<MAXFILS;i0++) *(list_fils+i0)=-1;
 	int n_fils = 0;
