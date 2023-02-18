@@ -74,7 +74,7 @@ int main(int argc, char *argv[]){
 			i++;
 		}
 		else {
-			//printf("CPU : %f\n",str_cpu());
+			printf("CPU : %f\n",str_cpu());
 		}
 	}
 	if(p != 0) wait(NULL);
